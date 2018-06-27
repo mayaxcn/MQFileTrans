@@ -5,6 +5,7 @@ using System.Text;
 
 namespace MQFileTrans
 {
+    //IBMMQ 6.0下测试通过，请使用服务器通道 
     class Program
     {
         public static System.Timers.Timer sendTimer;

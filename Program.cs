@@ -16,7 +16,7 @@ namespace MQFileTrans
             /////////////////////////发送部分（开始）////////////////////////////////
             Console.Write(DateTime.Now.ToString("[MM-dd HH:mm:ss]") + "发送通道已启动\r\n");
             sendTimer = new System.Timers.Timer();
-            sendTimer.Interval = Convert.ToDouble(2500);
+            sendTimer.Interval = Convert.ToDouble(2500);    //可更改检测目录时间
             sendTimer.Elapsed += new System.Timers.ElapsedEventHandler(sendTimer_Elapsed);
             sendTimer.Enabled = true;
             sendTimer.AutoReset = true;
@@ -25,7 +25,7 @@ namespace MQFileTrans
             /////////////////////////接收部分（开始）////////////////////////////////
             Console.Write(DateTime.Now.ToString("[MM-dd HH:mm:ss]") + "接收通道已启动\r\n");
             recvTimer = new System.Timers.Timer();
-            recvTimer.Interval = Convert.ToDouble(2000);
+            recvTimer.Interval = Convert.ToDouble(2000);    //可更改检测目录时间
             recvTimer.Elapsed += new System.Timers.ElapsedEventHandler(recvTimer_Elapsed);
             recvTimer.Enabled = true;
             recvTimer.AutoReset = true;
